@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+<style>
+    #particles-js{
+    width: 100%;
+    height: 100vh;
+    background: whitesmoke;
+    position: fixed;
+    z-index: -99;
+}
+</style>
+    
+<body>
+    <div id="particles-js"></div>
+<div> 
+    <script src="Java_scritp/particles.min.js"></script>
+    <script src="Java_scritp/appdow.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Unas pregunta</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="Index.js"></script>
+<link rel="stylesheet" href="Estilos_css/Resulta.css">
+<script>
+function CuandoDigaSi(){
+    rsp1 = "jaja ya lo sabia 🤨, no tenias que decirlo pero esta bien.";
+rsp2 = "¿Alguna vez te han dicho lo hermosa que eres?";
+    rsp3 = "No lo dudes eres una chica bonita y maravillosa, no te rindas cumple todas tus metas vamos hormiguita!!";
+    document.getElementById("lblResultado").innerHTML = rsp1;
+document.getElementById("lblResultado1").innerHTML = rsp2;
+    document.getElementById("lblResultado2").innerHTML = rsp3;
+}
+function CuandoDigaNo(){
+ancho = window.innerWidth; alto = window.innerHeight;
+
+x = (Math.random() * ancho) + "px"; y = (Math.random() * alto) + "px";
+
+document.getElementById('btnNo').style.position = "absolute";
+    document.getElementById('btnNo').style.left = x;
+document.getElementById('btnNo').style.top = y;
+}
+ </script>
+</head>
+
+<body>
+<h1>¿Eres un Oompa Loompa?</h1>
+<a style="margin: 10px" id="btnSi" onclick="CuandoDigaSi()"> Si </a>
+ <a style="margin: 10px" id="btnNo" onmouseover="CuandoDigaNo()"> No </a>
+<p id="lblResultado"></p>
+  <p id="lblResultado1"></p>
+    <p id="lblResultado2"></p>
+<div align="center"><img id ="foto" src="Image_html/Florkyou.jpg" width="250"></div>
+<p align="center">
+    Hormiguita y xq no acepta el si =) tal ves haiga algo mas?... 
+</p>
+</body>
+
+<script>
+function CuandoDigaShi(){
+spa1 = "Tu no mides 1.10cm o 1.49cm tu eres perfecta, a pesar de que seas pequeña";
+    spa2 = "Y estos pequeños detalles hacen ser a ti alguien especial.";
+spa3 = "El chocolate se muere de envidia al verte, porque en este mundo tú eres la más dulce.";
+    document.getElementById("lbResultado").innerHTML = spa1;
+document.getElementById("lbResultado1").innerHTML = spa2;
+    document.getElementById("lbResultado2").innerHTML = spa3;
+}
+function CuandoDigaNop(){
+ancho = window.innerWidth; alto = window.innerHeight;
+
+w = (Math.random() * ancho) + "px"; z = (Math.random() * alto) + "px";
+
+document.getElementById('btnNop').style.position = "absolute";
+    document.getElementById('btnNop').style.left = w;
+document.getElementById('btnNop').style.top = z;
+}
+ </script>
+</head>
+<body>
+<h1>¿Tu estatura es 1.10cm no?</h1>
+<a style="margin: 10px" id="btnShi" onclick="CuandoDigaShi()"> Shi </a>
+ <a style="margin: 10px" id="btnNop" onmouseover="CuandoDigaNop()"> Nop </a>
+<p id="lbResultado"></p>
+ <p id="lbResultado1"></p>
+  <p id="lbResultado2"></p>
+    <div align="center"><img id ="foto" src="Image_html/Carolbola.jpg" width="250"></div>
+<p align="center">
+    Bueno este es el primer dia ¿Como sera el segundo dia?, se paciente... miau
+</p>
+    </body>
+</html>
