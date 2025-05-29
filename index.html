@@ -1,368 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Corazón para María</title>
-    <style>
-       /* le damos un color de fondo a todo el cuerpo */
-       body {
-          background-color: #0b1522;
-          margin: 0;
-          padding: 0;
-          font-family: Arial, sans-serif;
-       }
-       /* accedemos al container que envuelve todas las palabras */
-       .container {
-          width: 500px;
-          height: 500px;
-          position: relative; /* para que los hijos absolutos se posicionen respecto a este contenedor */
-          margin: 20px auto;
-          /* border: 3px solid blue; quitamos el borde del contenedor principal */
-       }
-       /* accedemos a la palabra principal del centro de nuestro corazón */
-       .amor {
-          position: absolute;
-          right: 240px;
-          bottom: 100px;
-          color: red;
-          font-size: 30px;
-       }
-       /* ahora accederemos a las clases de todas las palabras */
-       .primera {
-          position: absolute;
-          right: 250px;
-          bottom: 0;
-       }
-       p {
-          color: red;
-          box-shadow: -10px 15px 100px #f20044;
-          margin: 0;
-          padding: 0;
-          animation: latiendo 0.6s linear infinite;
-          font-weight: bold;
-          user-select: none;
-       }
-       .segunda {
-          position: absolute;
-          right: 235px;
-          bottom: 15px;
-       }
-       .tercera {
-          position: absolute;
-          right: 215px;
-          bottom: 25px;
-       }
-       .cuarta {
-          position: absolute;
-          right: 205px;
-          bottom: 35px;
-       }
-       .quinta {
-          position: absolute;
-          right: 190px;
-          bottom: 45px;
-       }
-       .sexta {
-          position: absolute;
-          right: 175px;
-          bottom: 60px;
-       }
-       .septima {
-          position: absolute;
-          right: 160px;
-          bottom: 75px;
-       }
-       .octava {
-          position: absolute;
-          right: 145px;
-          bottom: 90px;
-       }
-       .novena {
-          position: absolute;
-          right: 140px;
-          bottom: 105px;
-       }
-       .decima {
-          position: absolute;
-          right: 125px;
-          bottom: 120px;
-       }
-       .decima1 {
-          position: absolute;
-          right: 110px;
-          bottom: 135px;
-       }
-       .decima2 {
-          position: absolute;
-          right: 100px;
-          bottom: 150px;
-       }
-       .decima3 {
-          position: absolute;
-          right: 100px;
-          bottom: 165px;
-       }
-       .decima4 {
-          position: absolute;
-          right: 100px;
-          bottom: 165px;
-       }
-       .decima5 {
-          position: absolute;
-          right: 100px;
-          bottom: 180px;
-       }
-       .decima6 {
-          position: absolute;
-          right: 105px;
-          bottom: 195px;
-       }
-       .decima7 {
-          position: absolute;
-          right: 110px;
-          bottom: 210px;
-       }
-       .decima8 {
-          position: absolute;
-          right: 120px;
-          bottom: 225px;
-       }
-       .decima9 {
-          position: absolute;
-          right: 130px;
-          bottom: 240px;
-       }
-       .vigesima {
-          position: absolute;
-          right: 140px;
-          bottom: 255px;
-       }
-       .vigesima1 {
-          position: absolute;
-          right: 175px;
-          bottom: 270px;
-       }
-       .vigesima2 {
-          position: absolute;
-          right: 205px;
-          bottom: 255px;
-       }
-       .vigesima3 {
-          position: absolute;
-          right: 220px;
-          bottom: 240px;
-       }
-       .vigesima4 {
-          position: absolute;
-          right: 230px;
-          bottom: 225px;
-       }
-       .vigesima5 {
-          position: absolute;
-          right: 240px;
-          bottom: 210px;
-       }
-       .vigesima6 {
-          position: absolute;
-          right: 250px;
-          bottom: 190px;
-       }
-       .primera- {
-          position: absolute;
-          left: 190px;
-          bottom: 15px;
-       }
-       .segunda- {
-          position: absolute;
-          right: 285px;
-          bottom: 30px;
-       }
-       .tercera- {
-          position: absolute;
-          right: 305px;
-          bottom: 40px;
-       }
-       .cuarta- {
-          position: absolute;
-          right: 315px;
-          bottom: 55px;
-       }
-       .quinta- {
-          position: absolute;
-          right: 345px;
-          bottom: 70px;
-       }
-       .sexta- {
-          position: absolute;
-          right: 355px;
-          bottom: 85px;
-       }
-       .septima- {
-          position: absolute;
-          right: 360px;
-          bottom: 100px;
-       }
-       .octava- {
-          position: absolute;
-          right: 375px;
-          bottom: 115px;
-       }
-       .novena- {
-          position: absolute;
-          right: 388px;
-          bottom: 128px;
-       }
-       .decima- {
-          position: absolute;
-          right: 395px;
-          bottom: 140px;
-       }
-       .decima-1 {
-          position: absolute;
-          right: 405px;
-          bottom: 155px;
-       }
-       .decima-2 {
-          position: absolute;
-          right: 425px;
-          bottom: 160px;
-       }
-       .decima-4 {
-          position: absolute;
-          right: 420px;
-          bottom: 170px;
-       }
-       .decima-5 {
-          position: absolute;
-          right: 430px;
-          bottom: 190px;
-       }
-       .decima-6 {
-          position: absolute;
-          right: 435px;
-          bottom: 205px;
-       }
-       .decima-7 {
-          position: absolute;
-          right: 415px;
-          bottom: 220px;
-       }
-       .decima-8 {
-          position: absolute;
-          right: 413px;
-          bottom: 235px;
-       }
-       .decima-9 {
-          position: absolute;
-          right: 405px;
-          bottom: 248px;
-       }
-       .vigesima- {
-          position: absolute;
-          right: 390px;
-          bottom: 265px;
-       }
-       .vigesima-1 {
-          position: absolute;
-          right: 370px;
-          bottom: 279px;
-       }
-       .vigesima-2 {
-          position: absolute;
-          right: 340px;
-          bottom: 265px;
-       }
-       .vigesima-3 {
-          position: absolute;
-          right: 320px;
-          bottom: 250px;
-       }
-       .vigesima-4 {
-          position: absolute;
-          right: 310px;
-          bottom: 235px;
-       }
-       .vigesima-5 {
-          position: absolute;
-          right: 300px;
-          bottom: 215px;
-       }
-       .vigesima-6 {
-          position: absolute;
-          right: 285px;
-          bottom: 200px;
-       }
-       .vigesima-7 {
-          position: absolute;
-          right: 285px;
-          bottom: 190px;
-       }
-       /* animación para latir */
-       @keyframes latiendo {
-          0% { transform: scale(1.4); }
-          80% { transform: scale(2); }
-       }
-    </style>
+  <meta charset="UTF-8">
+  <title>Buenos días amor</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-       <p class="amor">María</p>
-
-       <p class="primera">AMOR</p>
-       <p class="segunda">AMO</p>
-       <p class="tercera">María</p>
-       <p class="cuarta">María</p>
-       <p class="quinta">María</p>
-       <p class="sexta">María</p>
-       <p class="septima">María</p>
-       <p class="octava">María</p>
-       <p class="novena">amor</p>
-       <p class="decima">eterno</p>
-       <p class="decima1">María</p>
-       <p class="decima2">María</p>
-       <p class="decima3">María</p>
-       <p class="decima4">María</p>
-       <p class="decima5">vida</p>
-       <p class="decima6">TE</p>
-       <p class="decima7">deseo</p>
-       <p class="decima8">Feliz</p>
-       <p class="decima9">Feliz</p>
-       <p class="vigesima">Feliz</p>
-       <p class="vigesima1">AMOR</p>
-       <p class="vigesima2">vida</p>
-       <p class="vigesima3">Feliz</p>
-       <p class="vigesima4">Feliz</p>
-       <p class="vigesima5">Feliz</p>
-       <p class="vigesima6">Feliz</p>
-
-       <p class="primera-">AMOR</p>
-       <p class="segunda-">AMO</p>
-       <p class="tercera-">María</p>
-       <p class="cuarta-">María</p>
-       <p class="quinta-">María</p>
-       <p class="sexta-">María</p>
-       <p class="septima-">amor</p>
-       <p class="octava-">María</p>
-       <p class="novena-">María</p>
-       <p class="decima-">María</p>
-       <p class="decima-1">María</p>
-
-       <p class="decima-4">vid</p>
-       <p class="decima-5">vida</p>
-       <p class="decima-6">TE</p>
-       <p class="decima-7">deseo</p>
-       <p class="decima-8">Feliz</p>
-       <p class="decima-9">Feliz</p>
-       <p class="vigesima-">Feliz</p>
-       <p class="vigesima-1">Feliz</p>
-       <p class="vigesima-2">Feliz</p>
-       <p class="vigesima-3">Feliz</p>
-       <p class="vigesima-4">Feliz</p>
-       <p class="vigesima-5">Feliz</p>
-       <p class="vigesima-6">Feliz</p>
-       <p class="vigesima-7">Feliz</p>
+  <div class="valentines-day-card">
+    <input id="open" type="checkbox">
+    <label class="open" for="open"></label>
+    <div class="card-front">
+      <div class="note">Clickeame amor 💌</div>
     </div>
+    
+    <div class="card-inside">
+      <audio id="player">
+        <source src="https://on.soundcloud.com/ywLa1" type="audio/mpeg"/>
+      </audio>
+      <div class="text-one">Buenos días Mi Niña 
+      </div>
+      <div class="text-two">Te extrañere...</div>
+      <div class="text-three">Te Amo María ♥️✨🐢</div>
+      <div class="heart"></div>
+      <div class="smile"></div>
+      <div class="eyes"></div>
+    </div>
+  </div>
+
+  <script>
+    let input = document.getElementById("open");
+    let audio = document.getElementById("player");
+
+    input.addEventListener("click", function(){
+      if(audio.paused){
+        audio.play();
+        audio.currentTime = 0;
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://www.teahub.io/photos/full/3-36810_spiderman-1920-wallpaper-spiderman-web-background-hd.jpg");
+      background-size: cover;
+      font-family: 'Mochiy Pop P One', sans-serif;
+    }
+
+    input#open { display: none; }
+
+    .valentines-day-card {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      transform-style: preserve-3d;
+      transform: perspective(2500px);
+      transition: .3s;
+    }
+
+    .card-front {
+      position: relative;
+      background-color: #fff0f3;
+      width: 300px;
+      height: 300px;
+      transform-origin: left;
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 30px 0 50px rgba(0,0,0,0.3);
+      transition: .3s;
+    }
+
+    .card-front:before {
+      content:"";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background-color: #d04e4e;
+      top: 10px;
+      left: 10px;
+    }
+
+    .card-inside {
+      position: absolute;
+      background-color: #fff0f3;
+      width: 300px;
+      height: 300px;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,0.22), 100px 20px 100px rgba(0,0,0,0.1);
+    }
+
+    .open {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      left: 0;
+      top: 0;
+      background-color: transparent;
+      z-index: 6;
+      cursor: pointer;
+    }
+
+    #open:checked ~ .card-front {
+      transform: rotateY(-155deg);
+    }
+
+    #open:checked ~ .card-front:before {
+      z-index: 5;
+      background-color: #fff0f3;
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 0;
+    }
+
+    .note {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background-color: #fff0f3;
+      top: 75px;
+      left: 50px;
+      color: #333;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
+    }
+
+    .note:before, .note:after {
+      position: absolute;
+      content:"";
+      background-color: #ba1c1c;
+      width: 40px;
+      height: 40px;
+    }
+
+    .note:before {
+      transform: rotate(-45deg);
+      top: -20px;
+      left: 80px;
+    }
+
+    .note:after {
+      border-radius: 50%;
+      top: -35px;
+      left: 65px;
+      box-shadow: 30px 0 #ba1c1c;
+    }
+
+    .text-one, .text-two, .text-three {
+      position: relative;
+      color: #333;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .text-one { top: 20px; }
+    .text-two { top: 30px; color: #d04e4e; font-size: 18px; }
+    .text-three { top: 40px; font-size: 22px; font-weight: bold; color: #ba1c1c; }
+
+    .heart {
+      position: relative;
+      background-color: #d04e4e;
+      height: 60px;
+      width: 60px;
+      top: 50px;
+      left: 120px;
+      transform: rotate(-45deg);
+      animation: .8s beat infinite;
+    }
+
+    .heart:before, .heart:after {
+      content:"";
+      background-color: #d04e4e;
+      border-radius:50%;
+      height: 60px;
+      width: 60px;
+      position: absolute;
+    }
+
+    .heart:before { top:-30px; left:0; }
+    .heart:after { left:30px; top:0; }
+
+    .smile {
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      background-color: #333;
+      z-index: 1;
+      border-radius: 0 0 100px 100px;
+      top: 200px;
+      left: 135px;
+    }
+
+    .eyes {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #333;
+      width: 10px;
+      height: 10px;
+      z-index: 1;
+      top: 190px;
+      left: 165px;
+      box-shadow: -40px 0 #333;
+      animation: close 2s infinite;
+    }
+
+    @keyframes close {
+      0%, 100% { transform: scale(1, .05); }
+      5%, 95% { transform: scale(1, 1); }
+    }
+
+    @keyframes beat {
+      0%, 40%, 100% { transform: scale(1) rotate(-45deg); }
+      25%, 60% { transform: scale(1.1) rotate(-45deg); }
+    }
+  </style>
 </body>
 </html>
