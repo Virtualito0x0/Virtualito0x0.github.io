@@ -1,0 +1,53 @@
+
+body {
+    background-color: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+}
+
+.container p {
+    position: absolute;
+    color: #ff3399;
+    font-weight: bold;
+}
+
+.amor { top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; }
+
+.primera, .primera- { top: 10%; left: 45%; }
+.segunda, .segunda- { top: 15%; left: 40%; }
+.tercera, .tercera- { top: 20%; left: 35%; }
+.cuarta, .cuarta- { top: 25%; left: 30%; }
+.quinta, .quinta- { top: 30%; left: 25%; }
+.sexta, .sexta- { top: 35%; left: 20%; }
+.septima, .septima- { top: 40%; left: 15%; }
+.octava, .octava- { top: 45%; left: 10%; }
+.novena, .novena- { top: 50%; left: 5%; }
+.decima, .decima- { top: 55%; left: 10%; }
+.decima1, .decima-1 { top: 60%; left: 15%; }
+.decima2, .decima-2 { top: 65%; left: 20%; }
+.decima3, .decima-3 { top: 70%; left: 25%; }
+.decima4, .decima-4 { top: 75%; left: 30%; }
+.decima5, .decima-5 { top: 80%; left: 35%; }
+.decima6, .decima-6 { top: 85%; left: 40%; }
+.decima7, .decima-7 { top: 90%; left: 45%; }
+.decima8, .decima-8 { top: 90%; left: 50%; }
+.decima9, .decima-9 { top: 85%; left: 55%; }
+.vigesima, .vigesima- { top: 80%; left: 60%; }
+.vigesima1, .vigesima-1 { top: 75%; left: 65%; }
+.vigesima2, .vigesima-2 { top: 70%; left: 70%; }
+.vigesima3, .vigesima-3 { top: 65%; left: 75%; }
+.vigesima4, .vigesima-4 { top: 60%; left: 80%; }
+.vigesima5, .vigesima-5 { top: 55%; left: 85%; }
+.vigesima6, .vigesima-6 { top: 50%; left: 90%; }
+.vigesima7, .vigesima-7 { top: 45%; left: 85%; }
